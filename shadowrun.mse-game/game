@@ -1,0 +1,69 @@
+﻿mse version: 2.0.0
+short name: Shadowrun
+full name: 
+icon: icon.png
+position hint: 3
+installer group: Shadowrun/Game Files
+version: 1.0.0
+
+##### Init Script #####
+
+#init script:
+#    hello := {}
+
+##### Set Fields #####
+
+set field:
+	type: text
+	name: name
+set field:
+	type: text
+	name: description
+	multi line: true
+
+##### Card Fields #####
+
+card field:
+	type: choice
+	name: type
+	initial: rule
+	choice: rule
+	choice: gear
+	choice: action
+	show statistics: true
+	card list visible: true
+	card list width: 100
+card field:
+	type: text
+	name: title
+	show statistics: false
+	card list visible: true
+	card list width: 100
+card field:
+	type: text
+	name: subtitle
+	show statistics: true
+	card list visible: true
+	card list width: 100
+card field:
+	type: text
+	name: rule text
+	multi line: true
+	show statistics: false
+	card list visible: true
+	card list width: 100
+card field:
+	type: text
+	name: ref
+	show statistics: false
+	card list visible: true
+	card list width: 100
+card field:
+	type: image
+	name: image
+	show statistics: false
+	card list visible: false
+	card list width: 100
+
+##### Keywords #####
+has keywords: false

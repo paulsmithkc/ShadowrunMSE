@@ -1,0 +1,121 @@
+﻿mse version: 2.0.0
+game: shadowrun
+short name: Standard
+full name: 
+icon: icon.png
+position hint: 1
+installer group: Shadowrun/Standard
+version: 1.0.0
+depends on: shadowrun.mse-game 1.0.0
+
+card background: white
+card width: 375
+card height: 523
+card dpi: 150
+
+##### Styling Fields #####
+
+styling field:
+	type: choice
+	name: font_name
+	initial: Arial
+	choice: Arial
+	choice: Courier New
+	choice: Times New Roman
+styling field:
+	type: choice
+	name: font_size
+	initial: 12
+	choice: 8
+	choice: 9
+	choice: 10
+	choice: 12
+	choice: 13
+	choice: 14
+styling field:
+	type: color
+	name: foreground
+	initial: black
+	choice:
+		name: white
+		color: white
+	choice:
+		name: black
+		color: black
+	#script: {card.title_seperator := styling.foreground}
+styling field:
+	type: color
+	name: background
+	initial: white
+	choice:
+		name: white
+		color: white
+	choice:
+		name: black
+		color: black
+	#script: {card.background := styling.background}
+
+##### Card Style #####
+
+card style:
+	type:
+		left: 0
+		right: 375
+		top: 0
+		bottom: 523
+		z index: -10
+		render style: image
+		popup style: in place
+		choice images:
+			rule: card.png
+			gear: card.png
+			action: card.png
+	title:
+		left: 20
+		right: 355
+		top: 10
+		bottom: 40
+		alignment: left middle
+		z index: 4
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 12
+			weight: bold
+	subtitle:
+		left: 20
+		right: 355
+		top: 40
+		bottom: 70
+		alignment: left middle
+		z index: 3
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 12
+	rule_text:
+		left: 10
+		right: 365
+		top: 80
+		bottom: 483
+		alignment: left top
+		z index: 2
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: {styling.font_size}
+	ref:
+		left: 10
+		right: 365
+		top: 483
+		bottom: 513
+		alignment: center middle
+		z index: 1
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 12
