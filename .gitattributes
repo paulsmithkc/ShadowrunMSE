@@ -1,6 +1,16 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
+# Magic Set Editor
+packages text diff=mse
+locale text diff=mse
+game text diff=mse
+style text diff=mse
+*.aff text
+*.dic text
+*.mse-set binary
+*.exe binary
+
 # Custom for Visual Studio
 *.cs     diff=csharp
 *.sln    merge=union
