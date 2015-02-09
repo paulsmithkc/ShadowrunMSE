@@ -29,6 +29,7 @@ styling field:
 	choice: 8
 	choice: 9
 	choice: 10
+	choice: 11
 	choice: 12
 	choice: 13
 	choice: 14
@@ -70,6 +71,7 @@ card style:
 			rule: card.png
 			gear: card.png
 			action: card.png
+			spell: card.png
 	title:
 		left: 20
 		right: 355

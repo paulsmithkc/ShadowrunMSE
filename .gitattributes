@@ -9,15 +9,8 @@ style text diff=mse
 *.aff text
 *.dic text
 *.mse-set binary
+*.bat text
 *.exe binary
-
-# Custom for Visual Studio
-*.cs     diff=csharp
-*.sln    merge=union
-*.csproj merge=union
-*.vbproj merge=union
-*.fsproj merge=union
-*.dbproj merge=union
 
 # Standard to msysgit
 *.doc	 diff=astextplain

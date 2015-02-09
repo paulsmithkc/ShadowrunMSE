@@ -30,6 +30,7 @@ card field:
 	choice: rule
 	choice: gear
 	choice: action
+	choice: spell
 	show statistics: true
 	card list visible: true
 	card list width: 100
@@ -65,5 +66,90 @@ card field:
 	card list visible: false
 	card list width: 100
 
+##### Spells #####
+card field:
+	type: choice
+	name: spell_school
+	default:
+		if contains(card.subtitle, match: "Combat Spell")            then "combat"
+		else if contains(card.subtitle, match: "Detection Spell")    then "detection"
+		else if contains(card.subtitle, match: "Health Spell")       then "health"
+		else if contains(card.subtitle, match: "Illusion Spell")     then "illusion"
+		else if contains(card.subtitle, match: "Manipulation Spell") then "manipulation"
+		else                                                              "n/a"
+	choice: n/a
+	choice: combat
+	choice: detection
+	choice: health
+	choice: illusion
+	choice: manipulation
+	editable: false
+	save value: false
+	show statistics: true
+	card list visible: true
+	card list width: 100
+card field:
+	type: choice
+	name: spell_combat_direct
+	default:
+		if contains(card.subtitle, match: "Direct Combat Spell")        then "direct"
+		else if contains(card.subtitle, match: "Indirect Combat Spell") then "indirect"
+		else                                                                 "n/a"
+	choice: n/a
+	choice: direct
+	choice: indirect
+	editable: false
+	save value: false
+	show statistics: true
+	card list visible: true
+	card list width: 100
+	
+card field:
+	type: choice
+	name: spell_type
+	initial: n/a
+	choice: n/a
+	choice: physical
+	choice: mana
+	show statistics: true
+	card list visible: true
+	card list width: 100
+card field:
+	type: choice
+	name: spell_range
+	initial: n/a
+	choice: n/a
+	choice: touch
+	choice: los
+	choice: area
+	show statistics: true
+	card list visible: true
+	card list width: 100
+card field:
+	type: choice
+	name: spell_duration
+	initial: n/a
+	choice: n/a
+	choice: instant
+	choice: sustained
+	choice: permanent
+	show statistics: true
+	card list visible: true
+	card list width: 100
+card field:
+	type: text
+	name: spell_drain
+	show statistics: true
+	card list visible: true
+	card list width: 100
+
 ##### Keywords #####
-has keywords: false
+has keywords: true
+keyword mode:
+	name: spell
+	description: Spell keywords
+keyword mode:
+	name: custom
+	description: Custom keywords
+	is default: true
+

@@ -3,18 +3,23 @@ package:
 	name: en.mse-locale
 	version: 2011-01-22
 	status: 34
-	file: M20110122T213744 locale
-	file: M20071228T191340 usgb.png
+package:
+	name: shadowrun-spell.mse-style
+	version: 1.0.0
+	status: 18
+	file: 20150208T170529 card.png
+	file: 20150208T170529 icon.png
+	file: 20150208T170529 style
 package:
 	name: shadowrun-standard.mse-style
 	version: 1.0.0
 	status: 18
-	file: 20150208T131849 card.png
-	file: 20150208T131849 icon.png
-	file: 20150208T131849 style
+	file: 20150208T170529 card.png
+	file: 20150208T170529 icon.png
+	file: 20150208T170529 style
 package:
 	name: shadowrun.mse-game
 	version: 1.0.0
 	status: 18
-	file: 20150208T131849 game
-	file: 20150208T131849 icon.png
+	file: 20150208T170530 game
+	file: 20150208T170530 icon.png

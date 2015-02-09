@@ -1,0 +1,245 @@
+﻿mse version: 2.0.0
+game: shadowrun
+short name: Spell
+full name: 
+icon: icon.png
+position hint: 2
+installer group: Shadowrun/Spell
+version: 1.0.0
+depends on: shadowrun.mse-game 1.0.0
+
+card background: white
+card width: 375
+card height: 523
+card dpi: 150
+
+##### Styling Fields #####
+
+styling field:
+	type: choice
+	name: font_name
+	initial: Arial
+	choice: Arial
+	choice: Courier New
+	choice: Times New Roman
+styling field:
+	type: choice
+	name: font_size
+	initial: 8
+	choice: 8
+	choice: 9
+	choice: 10
+	choice: 11
+	choice: 12
+	choice: 13
+	choice: 14
+styling field:
+	type: color
+	name: foreground
+	initial: black
+	choice:
+		name: white
+		color: white
+	choice:
+		name: black
+		color: black
+styling field:
+	type: color
+	name: background
+	initial: white
+	choice:
+		name: white
+		color: white
+	choice:
+		name: black
+		color: black
+
+##### Extra Fields #####
+extra card field:
+	type: text
+	name: spell type label
+	default: "Type"
+	editable: false
+	save value: false
+extra card field:
+	type: text
+	name: spell range label
+	default: "Range"
+	editable: false
+	save value: false
+extra card field:
+	type: text
+	name: spell duration label
+	default: "Duration"
+	editable: false
+	save value: false
+extra card field:
+	type: text
+	name: spell drain label
+	default: "Drain"
+	editable: false
+	save value: false
+	
+##### Card Style #####
+
+card style:
+	type:
+		left: 0
+		right: 375
+		top: 0
+		bottom: 523
+		z index: -10
+		render style: image
+		popup style: in place
+		image: card.png
+	title:
+		left: 20
+		right: 355
+		top: 10
+		bottom: 40
+		alignment: left middle
+		z index: 4
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 12
+			weight: bold
+	subtitle:
+		left: 20
+		right: 355
+		top: 40
+		bottom: 70
+		alignment: left middle
+		z index: 4
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 12
+	
+	spell_type:
+		left: 100
+		right: 355
+		top: 70
+		bottom: 100
+		alignment: left middle
+		z index: 4
+		render style: text
+		popup style: in place
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 10
+	spell_range:
+		left: 100
+		right: 355
+		top: 100
+		bottom: 130
+		alignment: left middle
+		z index: 4
+		render style: text
+		popup style: in place
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 10
+	spell_duration:
+		left: 100
+		right: 355
+		top: 130
+		bottom: 160
+		alignment: left middle
+		z index: 4
+		render style: text
+		popup style: in place
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 10
+	spell_drain:
+		left: 100
+		right: 355
+		top: 160
+		bottom: 190
+		alignment: left middle
+		z index: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 10
+	
+	rule_text:
+		left: 10
+		right: 365
+		top: 210
+		bottom: 483
+		alignment: left top
+		z index: 2
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: {styling.font_size}
+	ref:
+		left: 10
+		right: 365
+		top: 483
+		bottom: 513
+		alignment: center middle
+		z index: 1
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 12
+			
+extra card style:
+	spell_type_label:
+		left: 20
+		right: 100
+		top: 70
+		bottom: 100
+		alignment: left middle
+		z index: 4
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 10
+	spell_range_label:
+		left: 20
+		right: 100
+		top: 100
+		bottom: 130
+		alignment: left middle
+		z index: 4
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 10
+	spell_duration_label:
+		left: 20
+		right: 100
+		top: 130
+		bottom: 160
+		alignment: left middle
+		z index: 4
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 10
+	spell_drain_label:
+		left: 20
+		right: 100
+		top: 160
+		bottom: 190
+		alignment: left middle
+		z index: 4
+		padding left: 4
+		font:
+			name: {styling.font_name}
+			color: {styling.foreground}
+			size: 10
